@@ -1,0 +1,14 @@
+<h2>Restaurants</h2>
+
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant), class: 'text-decoration-none'%></li>
+  <% end %>
+</ul>
+<hr>
+
+<div>
+  <%= link_to new_restaurant_path, class:"text-decoration-none" do %>
+    <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add a restaurant</button>
+  <% end %>
+</div>
